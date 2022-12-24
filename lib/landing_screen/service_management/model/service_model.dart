@@ -2,10 +2,12 @@ class ServiceModel {
   String? id;
   String? imageUrl;
   String serviceName;
+  String servicePrice1;
   ServiceModel({
     this.id,
     this.imageUrl,
     required this.serviceName,
+    required this.servicePrice1,
   });
 
   Map<String, dynamic> toMap() {
@@ -13,6 +15,7 @@ class ServiceModel {
       'id': id,
       'imageUrl': imageUrl,
       'serviceName': serviceName,
+      'servicePrice': servicePrice1,
     };
   }
 
@@ -21,6 +24,7 @@ class ServiceModel {
       id: map['id'],
       imageUrl: map['imageUrl'],
       serviceName: map['serviceName'] ?? '',
+      servicePrice1: map['servicePrice1'] ?? '',
     );
   }
 }

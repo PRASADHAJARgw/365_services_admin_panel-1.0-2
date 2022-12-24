@@ -25,6 +25,7 @@ class AddServiceDialogWidget extends StatefulWidget {
 class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   final _serviceNameController = TextEditingController();
+  final _servicePriceController1 = TextEditingController();
   PickedImageModel? _pickedImageModel;
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate() ||
@@ -68,7 +69,8 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
       if (widget.service == null) {
         await BlocProvider.of<ServiceCubit>(context).addService(
           context: context,
-          service: ServiceModel(serviceName: _serviceNameController.text),
+          service: ServiceModel(serviceName: _serviceNameController.text, servicePrice1: _servicePriceController1.text),
+
           pickedImage: _pickedImageModel!,
         );
         //Close the dialog box
@@ -78,7 +80,7 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
           service: ServiceModel(
             serviceName: _serviceNameController.text,
             id: widget.service!.id,
-            imageUrl: widget.service!.imageUrl,
+            imageUrl: widget.service!.imageUrl, servicePrice1: _servicePriceController1.text,
           ),
           pickedImage: _pickedImageModel,
         );
@@ -168,10 +170,68 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
         return null;
       },
     );
+    final _serviceNameTextField1 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField2 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField3 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField4 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField5 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField6 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField7 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField8 = TextFieldWidget(
+      controller: _servicePriceController1,
+      text: 'Service price',
+      hintText: 'Service price',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
     return Form(
       key: _formKey,
       child: Column(mainAxisSize: MainAxisSize.min, children: [
         _serviceNameTextField,
+        SizedBox(height: 20.h),
+        _serviceNameTextField1,
         SizedBox(height: 20.h),
         BlocBuilder<PickServiceImageCubit, PickServiceImageState>(
           builder: (context, state) {
@@ -238,3 +298,5 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
     );
   }
 }
+
+
