@@ -191,68 +191,101 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
     );
     final _serviceNameTextField1 = TextFieldWidget(
       controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      text: 'price 1',
+      hintText: 'price 1',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     final _serviceNameTextField2 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController2,
+      text: 'price 2',
+      hintText: 'price 2',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     final _serviceNameTextField3 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController3,
+      text: 'price 3',
+      hintText: 'price 3',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     final _serviceNameTextField4 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController4,
+      text: 'price 4',
+      hintText: 'price 4',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     final _serviceNameTextField5 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController5,
+      text: 'price 5',
+      hintText: 'price 5',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     final _serviceNameTextField6 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController6,
+      text: 'price 6',
+      hintText: 'price 6',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     final _serviceNameTextField7 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController7,
+      text: 'price 7',
+      hintText: 'price 7',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
 
     final _serviceNameTextField8 = TextFieldWidget(
-      controller: _servicePriceController1,
-      text: 'Service price',
-      hintText: 'Service price',
+      controller: _servicePriceController8,
+      text: 'price 8',
+      hintText: 'price 8',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField9 = TextFieldWidget(
+      controller: _servicePriceController9,
+      text: 'price 9',
+      hintText: 'price 9',
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.text,
+    );
+    final _serviceNameTextField10 = TextFieldWidget(
+      controller: _servicePriceController10,
+      text: 'price 10',
+      hintText: 'price 10',
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
     return Form(
       key: _formKey,
-      child: Column(mainAxisSize: MainAxisSize.min, children: [
+      child: SingleChildScrollView(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
         _serviceNameTextField,
-        SizedBox(height: 20.h),
+        SizedBox(height: 10.h),
         _serviceNameTextField1,
-        SizedBox(height: 20.h),
+        SizedBox(height: 10.h),
+        _serviceNameTextField2,
+        SizedBox(height: 10.h),
+        _serviceNameTextField3,
+        SizedBox(height: 10.h),
+        _serviceNameTextField4,
+        SizedBox(height: 10.h),
+        _serviceNameTextField5,
+        SizedBox(height: 10.h),
+        _serviceNameTextField6,
+        SizedBox(height: 10.h),
+        _serviceNameTextField7,
+        SizedBox(height: 10.h),
+        _serviceNameTextField8,
+        SizedBox(height: 10.h),
+        _serviceNameTextField9,
+        SizedBox(height: 10.h),
+        _serviceNameTextField10,
+        SizedBox(height: 10.h),
         BlocBuilder<PickServiceImageCubit, PickServiceImageState>(
           builder: (context, state) {
             if (state is ServiceImagepicked) {
@@ -315,6 +348,7 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
           },
         ),
       ]),
+      ),
     );
   }
 }
