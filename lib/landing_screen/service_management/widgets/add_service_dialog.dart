@@ -26,6 +26,16 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   final _serviceNameController = TextEditingController();
   final _servicePriceController1 = TextEditingController();
+  final _servicePriceController2 = TextEditingController();
+  final _servicePriceController3 = TextEditingController();
+  final _servicePriceController4 = TextEditingController();
+  final _servicePriceController5 = TextEditingController();
+  final _servicePriceController6 = TextEditingController();
+  final _servicePriceController7 = TextEditingController();
+  final _servicePriceController8 = TextEditingController();
+  final _servicePriceController9 = TextEditingController();
+  final _servicePriceController10 = TextEditingController();
+
   PickedImageModel? _pickedImageModel;
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate() ||
@@ -69,7 +79,12 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
       if (widget.service == null) {
         await BlocProvider.of<ServiceCubit>(context).addService(
           context: context,
-          service: ServiceModel(serviceName: _serviceNameController.text, servicePrice1: _servicePriceController1.text),
+          service: ServiceModel(serviceName: _serviceNameController.text, servicePrice1: _servicePriceController1.text,
+              servicePrice2: _servicePriceController2.text, servicePrice3: _servicePriceController3.text,
+              servicePrice4: _servicePriceController4.text, servicePrice5: _servicePriceController5.text,
+              servicePrice6: _servicePriceController6.text, servicePrice7: _servicePriceController7.text,
+              servicePrice8: _servicePriceController8.text, servicePrice9: _servicePriceController9.text,
+              servicePrice10: _servicePriceController10.text),
 
           pickedImage: _pickedImageModel!,
         );
@@ -81,7 +96,11 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
             serviceName: _serviceNameController.text,
             id: widget.service!.id,
             imageUrl: widget.service!.imageUrl, servicePrice1: _servicePriceController1.text,
-          ),
+              servicePrice2: _servicePriceController2.text, servicePrice3: _servicePriceController3.text,
+              servicePrice4: _servicePriceController4.text, servicePrice5: _servicePriceController5.text,
+              servicePrice6: _servicePriceController6.text, servicePrice7: _servicePriceController7.text,
+              servicePrice8: _servicePriceController8.text, servicePrice9: _servicePriceController9.text,
+              servicePrice10: _servicePriceController10.text),
           pickedImage: _pickedImageModel,
         );
       }
@@ -219,6 +238,7 @@ class _AddServiceDialogWidgetState extends State<AddServiceDialogWidget> {
       textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
     );
+
     final _serviceNameTextField8 = TextFieldWidget(
       controller: _servicePriceController1,
       text: 'Service price',
